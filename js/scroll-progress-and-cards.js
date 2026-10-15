@@ -1,0 +1,3 @@
+(function(){var pg=document.getElementById('pg'),pt=false;addEventListener('scroll',function(){if(pt)return;pt=true;requestAnimationFrame(function(){pt=false;pg.style.transform='scaleX('+Math.min(scrollY/Math.max(document.documentElement.scrollHeight-innerHeight,1),1)+')'})},{passive:true});
+document.querySelectorAll('.pj').forEach(function(c){var r=document.createElement('i');r.className='rec';r.textContent='REC';c.appendChild(r)});
+document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})})})();

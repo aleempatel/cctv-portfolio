@@ -1,0 +1,34 @@
+/* Premium v2 layer */
+section>.w{position:relative;z-index:1}
+section::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(640px 320px at 8% 0,color-mix(in srgb,var(--acc) 11%,transparent),transparent 70%)}
+section+section{border-top:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+.k{display:inline-flex;align-items:center;gap:12px}.k::after{content:"";width:46px;height:1px;background:var(--acc);opacity:.6}
+h2{background:linear-gradient(180deg,var(--tx) 40%,color-mix(in srgb,var(--tx) 50%,transparent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats{background:none;border:0;gap:16px}
+.stats div{border:1px solid var(--line);border-radius:20px;background:linear-gradient(160deg,var(--s2),var(--s1));box-shadow:inset 0 1px 0 #ffffff10}
+.stats b{background:linear-gradient(180deg,#a8d4ff,var(--acc));-webkit-background-clip:text;background-clip:text;color:transparent}
+.card{border:1px solid transparent;border-radius:22px;background:linear-gradient(155deg,var(--s2),var(--s1));box-shadow:0 34px 60px -42px #000c,inset 0 1px 0 #ffffff12;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(150deg,#3b9cffaa,transparent 34%,transparent 66%,#3b9cff55);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.card:not(.pj)::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(320px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--acc) 20%,transparent),transparent 62%)}
+.card:not(.pj):hover::after{opacity:1}
+.card:not(.pj) svg{width:56px;height:56px;padding:12px;background:color-mix(in srgb,var(--acc) 12%,transparent);border:1px solid color-mix(in srgb,var(--acc) 32%,transparent);border-radius:16px}
+.card h3{margin-top:44px}
+.brands span{transition:border-color .25s,transform .25s}.brands span:hover{border-color:var(--acc);transform:translateY(-2px)}
+.grid{counter-reset:pj}.pj{counter-increment:pj;background:repeating-linear-gradient(0deg,#ffffff07 0 1px,transparent 1px 3px),radial-gradient(500px 260px at 70% 20%,#12304d,#060d14)}
+.pj .k::before{content:"CAM 0" counter(pj);color:#e9f0f6;opacity:.8}
+.pj svg{filter:drop-shadow(0 0 10px #3b9cff66)}
+.rec{position:absolute;z-index:3;right:20px;top:18px;font:600 12px var(--h);letter-spacing:.14em;color:#ff6b6e;font-style:normal}
+.rec::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff4d4f;margin-right:6px;animation:bl 1.6s steps(2) infinite}
+.tl{border:0;padding:0}.tl div{background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:18px;padding:22px 24px 22px 30px;margin-bottom:14px}
+.tl div::before{left:12px;top:30px;box-shadow:0 0 0 4px color-mix(in srgb,var(--acc) 25%,transparent),0 0 14px var(--acc)}
+.two>.rv:nth-child(2)>div{background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:22px;padding:30px}
+.sk b{box-shadow:0 0 14px #3b9cff88}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:st}
+.steps li{counter-increment:st;position:relative;background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--line);border-radius:22px;padding:30px 24px}
+.steps li::before{content:"0" counter(st);display:block;font:700 64px/1 var(--h);color:transparent;-webkit-text-stroke:1px color-mix(in srgb,var(--acc) 70%,transparent);margin-bottom:22px}
+.steps h3{font:700 25px/1.05 var(--h);text-transform:uppercase;margin:0 0 8px}.steps p{margin:0;color:var(--mu);font-size:15.5px}
+.cta{border:1px solid transparent;border-radius:30px;padding:64px;background:linear-gradient(135deg,var(--s2),var(--s1)) padding-box,linear-gradient(135deg,#3b9cffaa,transparent 42%,#3b9cff66) border-box}
+#pg{position:fixed;top:0;left:0;right:0;height:2px;z-index:30;background:linear-gradient(90deg,var(--acc),#9fd0ff);transform-origin:left;transform:scaleX(0)}
+footer{background:linear-gradient(0deg,color-mix(in srgb,var(--acc) 6%,transparent),transparent)}
+@media(max-width:860px){.steps{grid-template-columns:1fr}.cta{padding:34px 24px}section{padding:72px 0}}
+/* SIMPLE PREMIUM HERO */

@@ -1,0 +1,40 @@
+/* True glass + 3D depth, skills and experience layout */
+:root{--bg:#0c1a29;--gl:linear-gradient(135deg,rgba(255,255,255,.17),rgba(255,255,255,.05) 45%,rgba(255,255,255,.09));--gb:rgba(255,255,255,.16);--bl:blur(22px) saturate(170%);
+--sh:0 1px 1px rgba(0,0,0,.2),0 2px 2px rgba(0,0,0,.2),0 4px 4px rgba(0,0,0,.2),0 8px 8px rgba(0,0,0,.2),0 16px 16px rgba(0,0,0,.18),0 32px 32px rgba(0,0,0,.16);
+--shh:0 2px 2px rgba(0,0,0,.24),0 4px 4px rgba(0,0,0,.24),0 8px 8px rgba(0,0,0,.24),0 16px 16px rgba(0,0,0,.22),0 32px 32px rgba(0,0,0,.2),0 56px 56px rgba(0,0,0,.18)}
+body{background:var(--bg)}
+.hero{background:linear-gradient(180deg,#09141f 0%,#0c1a29 100%)}
+/* solid shapes behind the glass, so the blur has something to frost */
+section::before{display:block;content:"";position:absolute;pointer-events:none;inset:auto;width:190px;height:190px;border-radius:44px;left:2%;bottom:6%;transform:rotate(18deg);background:linear-gradient(135deg,#7c5cff,#3b6cff)}
+section::after{content:"";position:absolute;pointer-events:none;width:280px;height:280px;border-radius:50%;top:12%;right:3%;background:linear-gradient(135deg,#4cb4ff,#2563eb)}
+section:nth-of-type(even)::before{left:auto;right:4%;bottom:10%;background:linear-gradient(135deg,#2dd4bf,#2563eb)}
+section:nth-of-type(even)::after{right:auto;left:2%;top:10%;width:240px;height:240px;background:linear-gradient(135deg,#5b8cff,#8b5cf6)}
+.hero .hg::before{right:-30px;top:30px;width:270px;height:270px;border-radius:50%;background:linear-gradient(135deg,#4cb4ff,#2563eb);z-index:-1}
+.hero .hg::after{left:auto;right:300px;bottom:-30px;width:150px;height:150px;border-radius:38px;transform:rotate(18deg);background:linear-gradient(135deg,#7c5cff,#3b6cff);z-index:-1}
+.card:not(.pj),.stats div,.steps li,.tl div,.two>.rv:nth-child(2)>div{background:var(--gl);border:1px solid var(--gb);border-top-color:rgba(255,255,255,.34);border-left-color:rgba(255,255,255,.26);-webkit-backdrop-filter:var(--bl);backdrop-filter:var(--bl);box-shadow:var(--sh),inset 0 1px 0 rgba(255,255,255,.38),inset 1px 0 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.18)}
+.card:not(.pj)::after{opacity:1;background:linear-gradient(125deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,.05) 26%,transparent 46%)}
+.card:hover,.steps li:hover,.tl div:hover,.stats div:hover{box-shadow:var(--shh),inset 0 1px 0 rgba(255,255,255,.45),inset 1px 0 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.2)}
+.steps li:hover,.stats div:hover,.tl div:hover{transform:translateY(-8px)}
+.card:not(.pj) svg{box-shadow:0 8px 14px -6px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.3);background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22)}
+.pj{box-shadow:var(--sh);border-color:rgba(255,255,255,.14)}.pj:hover{box-shadow:var(--shh)}
+.cta{background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.04)) padding-box,linear-gradient(135deg,rgba(255,255,255,.4),rgba(255,255,255,.06) 45%,rgba(255,255,255,.22)) border-box;box-shadow:var(--shh),inset 0 1px 0 rgba(255,255,255,.3)}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);border-top-color:rgba(255,255,255,.4);box-shadow:0 2px 2px rgba(0,0,0,.2),0 8px 8px rgba(0,0,0,.2),0 18px 22px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.35)}
+.pf{box-shadow:0 2px 2px rgba(0,0,0,.25),0 8px 8px rgba(0,0,0,.25),0 24px 30px rgba(0,0,0,.35),0 56px 70px rgba(0,0,0,.4)}
+.av{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22);box-shadow:0 8px 16px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn{box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -3px 0 rgba(0,0,0,.28),0 2px 2px rgba(0,0,0,.25),0 8px 12px rgba(0,0,0,.35),0 16px 24px rgba(0,0,0,.3)}
+.btn:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -3px 0 rgba(0,0,0,.28),0 4px 4px rgba(0,0,0,.25),0 14px 20px rgba(0,0,0,.4),0 26px 36px rgba(0,0,0,.32)}
+.btn:active{transform:translateY(1px);box-shadow:inset 0 2px 4px rgba(0,0,0,.35),0 2px 4px rgba(0,0,0,.3)}
+.btn.o{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.26);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 -2px 0 rgba(0,0,0,.2),0 8px 14px rgba(0,0,0,.3)}
+.brands span{background:var(--gl);border-color:var(--gb);box-shadow:0 2px 2px rgba(0,0,0,.2),0 8px 12px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.3)}
+@media(max-width:860px){:root{--bl:blur(12px) saturate(150%);--sh:0 2px 2px rgba(0,0,0,.22),0 8px 10px rgba(0,0,0,.22),0 22px 26px rgba(0,0,0,.2);--shh:var(--sh)}section::before{width:120px;height:120px}section::after{width:180px;height:180px}.hero .hg::before{width:200px;height:200px;right:10px}.hero .hg::after{display:none}}
+/* shapes removed */
+section::before,section::after,.hero .hg::before,.hero .hg::after{display:none!important;content:none!important}
+/* CTA matches other cards */
+.cta{background:var(--gl);border:1px solid var(--gb);border-top-color:rgba(255,255,255,.34);border-left-color:rgba(255,255,255,.26);-webkit-backdrop-filter:var(--bl);backdrop-filter:var(--bl);box-shadow:var(--sh),inset 0 1px 0 rgba(255,255,255,.38),inset 1px 0 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.18)}
+.cta::before{display:none!important;content:none!important}
+/* skills + experience layout */
+.skbox{display:grid;grid-template-columns:1fr 1fr;gap:8px 56px;padding:36px 40px;border-radius:22px;background:var(--gl);border:1px solid var(--gb);border-top-color:rgba(255,255,255,.34);border-left-color:rgba(255,255,255,.26);-webkit-backdrop-filter:var(--bl);backdrop-filter:var(--bl);box-shadow:var(--sh),inset 0 1px 0 rgba(255,255,255,.38),inset 0 -1px 0 rgba(0,0,0,.18)}
+.skbox .sk{margin:10px 0}
+#ops .tl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}#ops .tl div{margin:0}
+@media(max-width:860px){.skbox{grid-template-columns:1fr;padding:26px 22px}#ops .tl{grid-template-columns:1fr}}
+/* PREMIUM POLISH v3 */

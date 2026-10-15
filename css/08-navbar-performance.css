@@ -1,0 +1,36 @@
+/* Navbar fit + smooth performance, mobile tweaks */
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+nav{padding:env(safe-area-inset-top,0px) 0 0;background:rgba(9,19,30,.72);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 10px 24px -8px rgba(0,0,0,.55)}
+nav .w{height:64px;max-width:1140px;padding:0 22px;border-radius:0;background:none;border:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+nav .btn{border-radius:8px;padding:11px 22px}
+.mp{left:12px;right:12px;top:calc(100% + 6px)}
+@media(max-width:860px){nav .w{padding:0 16px;height:60px}nav .btn{border-radius:8px;padding:10px 16px}}
+@media(pointer:coarse),(max-width:860px){
+.card:not(.pj),.stats div,.steps li,.tl div,.skbox,.fq,.qf,.cta,.brands span,.chip,.av{-webkit-backdrop-filter:none;backdrop-filter:none}
+.card{will-change:auto}body::after{display:none}.mq div{animation-duration:36s}}
+html,body{-webkit-text-size-adjust:100%}a,button,summary{touch-action:manipulation}
+/* MOBILE BUTTER-SMOOTH: remove everything that repaints while scrolling */
+@media (hover:none),(max-width:860px){
+html{scroll-behavior:auto}
+nav{background:#0a141f;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 1px 0 rgba(255,255,255,.1)}
+.mp{background:#0d1b2a;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 12px 24px rgba(0,0,0,.45)}
+.fab{background:#16283a;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 6px 16px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.25)}
+:root{--sh:0 10px 22px rgba(0,0,0,.32);--shh:0 10px 22px rgba(0,0,0,.32)}
+.pf{box-shadow:0 0 0 8px rgba(255,255,255,.035),0 0 0 9px rgba(255,255,255,.11),0 18px 30px rgba(0,0,0,.4)}
+.chip,.av{box-shadow:0 6px 14px rgba(0,0,0,.35);background:rgba(20,34,50,.92)}
+.btn,.btn.o,.btn:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 12px rgba(0,0,0,.35)}
+.hero::before{display:none}
+.pj::before{display:none}.pj svg{filter:none}
+h2,.stats b{background:none;-webkit-background-clip:border-box;background-clip:border-box}
+h2{color:var(--tx);-webkit-text-fill-color:var(--tx)}
+.stats b{-webkit-text-fill-color:var(--acc);color:var(--acc)}
+.card:not(.pj)::after{display:none}
+.card,.steps li,.tl div,.stats div,.fq{transition:none}
+.rv{transition:opacity .6s,transform .6s}
+.wm{-webkit-mask-image:none;mask-image:none;opacity:.55}
+.mq div{will-change:transform}
+}
+/* timeline dot spacing */
+.tl div{padding:22px 24px 22px 50px}
+.tl div::before{left:21px;top:34px;width:12px;height:12px}
+/* real photos */

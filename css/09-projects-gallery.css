@@ -1,0 +1,46 @@
+/* Real photos, project cards, gallery, contact links */
+.pf{cursor:default}
+.pf.has{background:linear-gradient(180deg,#26465f 0%,#132638 58%,#0c1824 100%) padding-box,linear-gradient(150deg,#3b9cffcc,transparent 40%,#3b9cff66) border-box}
+.pf img{object-position:50% 0}
+.pj img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.pj:hover img{transform:scale(1.05)}
+.pj::after{background:linear-gradient(0deg,#060d14 6%,rgba(6,13,20,.6) 38%,transparent 74%)}
+@media(hover:none){.pj:hover img{transform:none}}
+/* single project + gallery */
+.feat{display:grid;grid-template-columns:1.25fr 1fr;border-radius:24px;overflow:hidden;background:var(--gl);border:1px solid var(--gb);border-top-color:rgba(255,255,255,.34);box-shadow:var(--sh),inset 0 1px 0 rgba(255,255,255,.3)}
+.cover{position:relative;display:block;padding:0;border:0;margin:0;cursor:pointer;min-height:440px;background:#060d14;overflow:hidden}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.cover:hover img{transform:scale(1.04)}
+.cnt{position:absolute;left:18px;bottom:18px;z-index:2;font:600 13px var(--h);letter-spacing:.14em;text-transform:uppercase;color:#e9f0f6;background:rgba(10,20,32,.82);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:8px 16px}
+.fi{padding:44px 40px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.fi h3{font:700 clamp(36px,4.4vw,54px)/.98 var(--h);text-transform:uppercase;margin:0}
+.fi p{margin:0;color:var(--mu)}
+.fi ul{display:flex;gap:8px;list-style:none;padding:0;margin:4px 0 14px;flex-wrap:wrap}
+.fi li{font:600 12px var(--h);letter-spacing:.12em;color:var(--acc);border:1px solid #3b9cff55;padding:4px 12px;border-radius:99px}
+.fi .btn{align-self:flex-start;cursor:pointer;font-family:var(--b)}
+body.lock{overflow:hidden}
+.gal{position:fixed;inset:0;z-index:120;background:#05090e;visibility:hidden;opacity:0;transition:opacity .35s,visibility .35s;overscroll-behavior:contain}
+.gal.open{visibility:visible;opacity:1}
+.gh{position:absolute;top:0;left:0;right:0;height:calc(68px + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 22px 0;display:flex;justify-content:space-between;align-items:center;color:#e9f0f6}
+.gh b{display:block;font:700 22px var(--h);letter-spacing:.06em;text-transform:uppercase}.gh span{font-size:14px;color:#8ba2b5}
+.gh button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#e9f0f6;font-size:16px;cursor:pointer}
+.gt{position:absolute;left:0;right:0;top:calc(68px + env(safe-area-inset-top,0px));bottom:calc(76px + env(safe-area-inset-bottom,0px));display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;outline:none}
+.gt::-webkit-scrollbar{display:none}
+.gt figure{flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;margin:0;padding:0 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-width:0}
+.gt img{max-width:100%;max-height:calc(100% - 40px);min-height:0;object-fit:contain;border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.gt figcaption{font:600 14px var(--h);letter-spacing:.18em;text-transform:uppercase;color:#8ba2b5}
+.gd{position:absolute;left:0;right:0;bottom:calc(30px + env(safe-area-inset-bottom,0px));display:flex;justify-content:center;gap:10px}
+.gd i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.28);cursor:pointer;transition:width .3s,background .3s}.gd i.on{width:26px;background:#e9f0f6}
+.gn{display:none;position:absolute;top:50%;margin-top:-26px;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#e9f0f6;font-size:30px;line-height:1;cursor:pointer}
+.gp{left:22px}.gnx{right:22px}
+@media(hover:hover) and (min-width:861px){.gn{display:block}.gn:hover{background:rgba(255,255,255,.16)}}
+@media(max-width:860px){.feat{grid-template-columns:1fr}.cover{min-height:0;aspect-ratio:4/3}.fi{padding:28px 22px}.gt figure{padding:0 14px}}
+/* profile chip: smaller and higher so it never covers the hair */
+.c1{top:12px;left:12px;padding:6px 12px;font-size:12px}
+/* two projects */
+.feat+.feat{margin-top:28px}
+@media(min-width:861px){.feat.rev{grid-template-columns:1fr 1.25fr}.feat.rev .cover{order:2}}
+/* contact links */
+.cta li a,.fg a{text-decoration:none}.cta li a:hover{text-decoration:underline}
+
+/* ===== ULTRA PREMIUM LAYER: obsidian + champagne gold ===== */

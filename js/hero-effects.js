@@ -1,0 +1,4 @@
+(function(){var h=document.querySelector('.hero h1');if(h){var W=[['Security',0],['you',0],['can',0],['trust.',1]];h.setAttribute('aria-label','Security you can trust.');h.innerHTML=W.map(function(w,i){return '<span class="wd" aria-hidden="true"><span class="'+(w[1]?'ac':'')+'" style="--i:'+i+'">'+w[0]+'</span></span>'}).join(' ')}
+var fine=matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches;if(!fine)return;
+
+document.querySelectorAll('.hero .btn,.cta .btn,.qf .btn').forEach(function(b){b.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.28)+'px)'});b.addEventListener('pointerleave',function(){b.style.transform=''})})})();
